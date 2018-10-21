@@ -18,7 +18,7 @@
         <%#= f.input :subject, placeholder: "What subject it belongs to?"%>
         <%= f.association :subject, collection: Subject.all, promt: "A qué area pertenece?" %>
         <%= f.input :difficulty, collection: ["easy", "medium", "hard"]%>
-        <%= f.input :description, placeholder: "Add a description to the goal" %>
+        <%= f.input :description, placeholder: "Añade una descripción a tu assignatura" %>
 
         <div class="text-center">
           <%= f.submit "Done", class: "btn btn-homepage xs-margin" %>
