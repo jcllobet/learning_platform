@@ -17,9 +17,10 @@ CATEGORIES = [
               ["others"], ["arts"], ["health"], ["fitness"], ["money"], ["self-improvement"], ["intimacy"], ["social"], ["work"], ["study"]
             ]
 
-jan = User.create!(name: "jan", email: "jan@gmail.com", password: "123456")
-oula = User.create!(name: "oula", email: "oulanakhle@gmail.com", password: "123456")
-niko = User.create!(name: "niko", email: "niko@gmail.com", password: "123456")
+jan = User.create!(name: "jan", email: "jan@estudiant.upc.edu", password: "123456")
+marina = User.create!(name: "marina", email: "oulanakhle@gmail.com", password: "123456")
+santi = User.create!(name: "santi", email: "niko@gmail.com", password: "123456")
+sara = User.create!(name: "santi", email: "niko@gmail.com", password: "123456")
 admin = User.create!(name: "anon", email: "a@b.com", password: "123456")
 
 puts "Creating Subjects"
