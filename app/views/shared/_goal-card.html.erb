@@ -20,7 +20,7 @@
           </div>
           <%= image_tag goal.subject.name.downcase + '.svg', class: "product-image hidden-xs"%>
           <div class='product-body'>
-            <h6>Average completion: <%= calculate_time(goal) %> Hours</h6>
+            <h6>Tiempo estimado: <%= calculate_time(goal) %> Horas</h6>
             <h3><%= goal.name %></h3>
             <p><%= goal.subject.name.upcase %></p>
           </div>

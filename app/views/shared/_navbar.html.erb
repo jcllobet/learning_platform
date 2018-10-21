@@ -11,11 +11,11 @@
       <!-- Links when logged in -->
       <!-- Avatar with dropdown menu -->
 
-      <%= link_to t(".profile", default: "Profile"), dashboard_path, class: "navbar-learnbox-item navbar-learnbox-link-sign-in" %>
+      <%= link_to t(".profile", default: "Perfil"), dashboard_path, class: "navbar-learnbox-item navbar-learnbox-link-sign-in" %>
 
-      <%= link_to t(".dashboard", default: "My Goals"), dashboard_path, class: "navbar-learnbox-item navbar-learnbox-link-sign-in" %>
+      <%= link_to t(".dashboard", default: "Mis Asignaturas"), dashboard_path, class: "navbar-learnbox-item navbar-learnbox-link-sign-in" %>
 
-      <%= link_to t(".search", default: "Search"),goals_path , class: "navbar-learnbox-item navbar-learnbox-link-sign-in" %>
+      <%= link_to t(".search", default: "Buscar"),goals_path , class: "navbar-learnbox-item navbar-learnbox-link-sign-in" %>
 
       <%= link_to 'Logout', destroy_user_session_path, :method => :delete, :class => "navbar-learnbox-item navbar-learnbox-link-sign-in"  %>
 
