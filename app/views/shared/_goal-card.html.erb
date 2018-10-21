@@ -1,0 +1,33 @@
+<% @goals = @goals.sort_by { |goal| goal.votes} %>
+<% @goals.reverse! %>
+<% @goals.each do |goal| %>
+  <div class="col-xs-12 col-sm-6">
+    <!-- if I link to do it fucks up the card -->
+      <% if goal.difficulty == "hard" %>
+        <div class="product card__border-hard">
+
+      <% elsif goal.difficulty == "medium" %>
+        <div class="product card__border-medium">
+
+      <% else %>
+        <div class="product card__border-easy">
+      <% end %>
+        <%= link_to show_public_path(goal), class: "product-link" do %>
+          <div class='product-upvote'>
+            <div class="product-arrow"></div>
+            <div class='product-count'><%= goal.votes %></div>
+            <div class="product-downvote"></div>
+          </div>
+          <%= image_tag goal.subject.name.downcase + '.svg', class: "product-image hidden-xs"%>
+          <div class='product-body'>
+            <h6>Average completion: <%= calculate_time(goal) %> Hours</h6>
+            <h3><%= goal.name %></h3>
+            <p><%= goal.subject.name.upcase %></p>
+          </div>
+        <% end %>
+          <ul class="list-inline product-controls product-controls-hidden hidden-sm hidden-xs">
+            <li><%= link_to "Add", create_from_copy_path(id: goal.id), method: "post", class: "far fa-star" %></li>
+          </ul>
+      </div>
+  </div>
+<% end %>

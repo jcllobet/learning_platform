@@ -1,0 +1,29 @@
+<div class="login__wrapper" style="background-image: url('<%= image_path('Sign-up.png') %>')">
+  <div class="container ctn-login">
+    <div class="login-top">
+        <h3>Edit your task</h3>
+    </div>
+    <div class="goal-new__box">
+        <%= simple_form_for([@goal, @task ]) do |f| %>
+          <% if @task.errors.any? %>
+            <div class="errors-container">
+              <ul>
+                <% @task.errors.full_messages.each do |message| %>
+                  <li><%= message %></li>
+                <% end %>
+              </ul>
+            </div>
+          <% end %>
+          <%= f.input :name,  class:"task-new__form-name",
+          :placeholder => "Name your task"  %>
+          <%= f.input :hours, class:"task-new__form-hours",
+          :placeholder => "How long do you think this will this take?" %>
+          <div class="text-center">
+          <%= f.submit "Update", class: "btn btn-homepage" %>
+          </div>
+          <!-- [...] all the fields -->
+        <% end %>
+      <hr>
+    </div>
+  </div>
+</div>

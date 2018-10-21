@@ -1,0 +1,123 @@
+.goals-container {
+  a:hover, a:visited, a:link, a:active {
+    color: #000000;
+  }
+}
+
+.goals-index-card {
+  min-height: 30px;
+  background-color: #edeef7;
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.goals-index-card__subject {
+  width: auto;
+  height: 15px;
+  border: 1px solid gray;
+  border-radius: 20px;
+  font-size: 12px;
+  margin-left: 20px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 15px;
+  padding-bottom: 3px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+
+.goals-index-card__time{
+  margin-left: auto;
+  font-size: 12px;
+  text-align: center;
+  font-family: Montserrat;
+}
+
+.goals-index-card__title {
+  width: auto;
+  padding-left: 5px;
+}
+
+.goals-index-card__import {
+  margin-left: auto;
+  font-size: 14px;
+  font-family: Montserrat;
+}
+
+
+.card__border-hard {
+  border-right: 10px solid #EB5A46;
+}
+
+.card__border-medium {
+  border-right: 10px solid #F7A500;
+}
+
+.card__border-easy {
+  border-right: 10px solid #61BD4F;
+}
+
+.goal-index-filter {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+}
+
+.goal_index-filter__box{
+  position:relative;
+  width: 30px;
+  height: 40px;
+  margin-right: 20px;
+  margin-left: 20px;
+  align-items: center;
+  background-color: transparent;
+}
+
+.goal-index-filter__green {
+  position:relative;
+  width: 30px;
+  height: 30px;
+  background-color: #61BD4F;
+  border-radius: 50%;
+
+}
+
+.goal-index-filter__orange {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background-color: #F7A500;
+  border-radius: 50%;
+}
+
+.goal-index-filter__red {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background-color: #EB5A46;
+  border-radius: 50%;
+}
+
+.goal-index-filter__active {
+  border-bottom: 2px solid black;
+}
+.search-form{
+  max-width: 700px;
+  .form-control{
+    background-color: white;
+  }
+
+  .form-control:hover {
+  background-color: #f4e6d7 !important;
+  transition: 1s;
+  }
+
+}
+
+

@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="dashboard-container">
+    <div class="dashboard-row">
+      <div class="dashboard-top-text">
+        <div class="dashboard__h3 text-center ">
+          Manage your goals
+        </div>
+      </div>
+      <div class="dashboard-links">
+        <%= link_to "Add a new goal", new_goal_path, class: "btn btn-orange dashboard__btn-side-margin" %>
+      </div>
+      <div class="dashboard__cards-wrapper lg-padding">
+        <div class="row">
+          <% if current_user.goals.any? %>
+            <%= render 'shared/my-goal-card' %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

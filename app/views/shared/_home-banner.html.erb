@@ -1,0 +1,12 @@
+<div class="homepage-banner">
+  <div class ="container">
+    <h2 class="features__heading"> Reach your goals, the smart way</h2>
+      <p class="features__text"> ACHIEVE YOUR DREAMS BY TRACKING AND SHARING YOUR GOALS WITH OUR MOTIVATED COMMUNITY.</p>
+        <% if current_user %>
+          <%= link_to "Start your goal", goals_path, class: "btn btn-homepage bolder" %>
+        <% else %>
+          <%= link_to "Start your goal", new_user_registration_path, class: "btn btn-homepage bolder" %>
+        <% end %>
+  </div>
+</div>
+

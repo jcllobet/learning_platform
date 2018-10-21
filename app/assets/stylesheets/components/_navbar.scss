@@ -1,0 +1,127 @@
+.headroom {
+    will-change: transform;
+    transition: 200ms linear;
+
+    .solid-nav & {
+        background-color: #214A81 !important;
+    }
+}
+.headroom--pinned {
+    transform: translateY(0%);
+    background-color: rgba(255,255,255,.95);
+}
+.headroom--unpinned {
+    transform: translateY(-100%);
+    background-color: rgba(255,255,255,0);
+}
+
+.headroom--top {
+  background-color: rgba(0, 0, 0, 0) !important;
+}
+
+/* Main navbar */
+.navbar-learnbox {
+  background-color: #214A81;
+  border: transparent;
+  height: 60px;
+  padding: 0px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+.navbar-learnbox-brand img {
+  height: 40px;
+}
+
+/* User Avatar */
+.navbar-learnbox .avatar {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+}
+
+/* Right section */
+.navbar-learnbox-right {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Basic navbar item */
+.navbar-learnbox-item {
+  cursor: pointer;
+  padding: 0 20px;
+}
+
+/* Navbar link */
+.navbar-learnbox-link-sign-in {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+
+  &:hover {
+      color: white;
+  }
+}
+
+.navbar-learnbox-link-sign-up {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #FFA617;
+    border-radius: 30px;
+    padding-top: 3px;
+    padding-bottom: 6px;
+
+    &:hover {
+        color: white;
+    }
+}
+
+/* Dropdown menu */
+.navbar-learnbox-dropdown-menu {
+  margin-top: 15px;
+  box-shadow: 1px 1px 4px #E6E6E6;
+  border-color: #E6E6E6;
+}
+.navbar-learnbox-dropdown-menu li > a {
+  transition: color 0.3s ease;
+  font-weight: lighter !important;
+  color: #999999 !important;
+  font-size: 15px !important;
+  line-height: 22px !important;
+  padding: 10px 20px;
+}
+.navbar-learnbox-dropdown-menu li > a:hover {
+  background: transparent !important;
+  color: black !important;
+}
+.navbar-learnbox-dropdown-menu:before {
+  content: ' ';
+  height: 10px;
+  width: 10px;
+  position: absolute;
+  right: 10px;
+  top: -6px;
+  background-color: white;
+  transform: rotate(45deg);
+  border-left: 1px solid #E6E6E6;
+  border-top: 1px solid #E6E6E6;
+}
+
+.home-search-wrapper {
+  display: flex;
+}
+.home-search-submit {
+  position: static;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  background: transparent;
+  border: transparent;
+}
+
+.fa-bars {
+  color: white;
+}
