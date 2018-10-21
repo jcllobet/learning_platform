@@ -10,26 +10,15 @@
     <% if user_signed_in? %>
       <!-- Links when logged in -->
       <!-- Avatar with dropdown menu -->
-      <%= link_to "Coach me", "https://m.me/230130457848782", class: "navbar-learnbox-item navbar-learnbox-link-sign-in" %>
-      <%= link_to t(".search", default: "Search"),goals_path , class: "navbar-learnbox-item navbar-learnbox-link-sign-in" %>
+
+      <%= link_to t(".profile", default: "Profile"), dashboard_path, class: "navbar-learnbox-item navbar-learnbox-link-sign-in" %>
+
       <%= link_to t(".dashboard", default: "My Goals"), dashboard_path, class: "navbar-learnbox-item navbar-learnbox-link-sign-in" %>
-      <div class="navbar-learnbox-item">
-        <div class="dropdown">
-          <%= image_tag "https://cdn2.vectorstock.com/i/thumb-large/23/81/default-avatar-profile-icon-vector-18942381.jpg", class: "avatar dropdown-toggle", id: "navbar-learnbox-menu", "data-toggle" => "dropdown" %>
-          <ul class="dropdown-menu dropdown-menu-right navbar-learnbox-dropdown-menu">
-            <li>
-              <%= link_to dashboard_path do %>
-                <i class="fa fa-user"></i> <%= t(".profile", default: "Profile") %>
-              <% end %>
-            </li>
-            <li>
-              <%= link_to destroy_user_session_path, method: :delete do %>
-                <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Log out") %>
-              <% end %>
-            </li>
-          </ul>
-        </div>
-      </div>
+
+      <%= link_to t(".search", default: "Search"),goals_path , class: "navbar-learnbox-item navbar-learnbox-link-sign-in" %>
+
+      <%= link_to 'Logout', destroy_user_session_path, :method => :delete, :class => "navbar-learnbox-item navbar-learnbox-link-sign-in"  %>
+
     <% else %>
       <!-- Login link (when logged out) -->
       <%= link_to t(".sign_in", default: "Sign in"), new_user_session_path, class: "navbar-learnbox-item navbar-learnbox-link-sign-in" %>
