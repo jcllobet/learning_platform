@@ -389,3 +389,21 @@ Processing by PagesController#home as HTML
 Completed 200 OK in 46ms (Views: 44.6ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-10-21 04:34:51 +0200
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/jan/.rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 449], ["LIMIT", 1]]
+  ↳ app/views/shared/_home-banner.html.erb:5
+  Rendered shared/_home-banner.html.erb (25.1ms)
+  Rendered shared/_pricing.html.erb (1.1ms)
+  Rendered pages/home.html.erb within layouts/application (1226.3ms)
+  Rendered shared/_navbar.html.erb (87.3ms)
+  Rendered shared/_flashes.html.erb (0.4ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 1352ms (Views: 1344.7ms | ActiveRecord: 4.7ms)
+
+
+  [1m[35m (31.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
