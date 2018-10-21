@@ -1,11 +1,11 @@
 <div class="homepage-banner">
   <div class ="container">
-    <h2 class="features__heading"> Reach your goals, the smart way</h2>
-      <p class="features__text"> ACHIEVE YOUR DREAMS BY TRACKING AND SHARING YOUR GOALS WITH OUR MOTIVATED COMMUNITY.</p>
+    <h2 class="features__heading"> Preparate para la 4ta revolución industrial</h2>
+      <p class="features__text"> Aprendre sobre las nuevas áreas de conocimiento mediante un curso práctico enseñado por las mejores empresas del sector. </p>
         <% if current_user %>
-          <%= link_to "Start your goal", goals_path, class: "btn btn-homepage bolder" %>
+          <%= link_to "Empieza el Reto", goals_path, class: "btn btn-homepage bolder" %>
         <% else %>
-          <%= link_to "Start your goal", new_user_registration_path, class: "btn btn-homepage bolder" %>
+          <%= link_to "Empieza el Reto", new_user_registration_path, class: "btn btn-homepage bolder" %>
         <% end %>
   </div>
 </div>
