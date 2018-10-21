@@ -1,0 +1,391 @@
+  [1m[35m (10.9ms)[0m  [1m[35mCREATE DATABASE "learn_box_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE DATABASE "learn_box_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1126172371109250255)[0m
+  ↳ bin/rails:9
+  [1m[35m (37.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (12.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(1126172371109250255)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for 127.0.0.1 at 2018-10-21 03:51:56 +0200
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/jan/.rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (27.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 449], ["LIMIT", 1]]
+  ↳ app/views/shared/_home-banner.html.erb:5
+  Rendered shared/_home-banner.html.erb (62.6ms)
+  Rendered shared/_pricing.html.erb (0.6ms)
+  Rendered pages/home.html.erb within layouts/application (10118.0ms)
+  Rendered shared/_navbar.html.erb (844.0ms)
+  Rendered shared/_flashes.html.erb (0.4ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /home/jan/code/jcllobet/rails/learning_platform/public/packs
+Completed 200 OK in 13404ms (Views: 13362.5ms | ActiveRecord: 34.4ms)
+
+
+Started GET "/goals" for 127.0.0.1 at 2018-10-21 03:53:47 +0200
+Processing by GoalsController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 449], ["LIMIT", 1]]
+  ↳ /home/jan/.rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering goals/index.html.erb within layouts/application
+  [1m[36mGoal Load (159.9ms)[0m  [1m[34mSELECT "goals".* FROM "goals"[0m
+  ↳ app/views/shared/_goal-card.html.erb:1
+  [1m[36mSubject Load (31.6ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 762], ["LIMIT", 1]]
+  ↳ app/views/shared/_goal-card.html.erb:21
+  [1m[36mTask Load (37.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."goal_id" = $1[0m  [["goal_id", 2134]]
+  ↳ app/helpers/application_helper.rb:4
+  [1m[36mSubject Load (0.3ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 761], ["LIMIT", 1]]
+  ↳ app/views/shared/_goal-card.html.erb:21
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."goal_id" = $1[0m  [["goal_id", 2151]]
+  ↳ app/helpers/application_helper.rb:4
+  [1m[36mCACHE Subject Load (0.0ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 761], ["LIMIT", 1]]
+  ↳ app/views/shared/_goal-card.html.erb:21
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."goal_id" = $1[0m  [["goal_id", 2154]]
+  ↳ app/helpers/application_helper.rb:4
+  [1m[36mCACHE Subject Load (0.0ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 761], ["LIMIT", 1]]
+  ↳ app/views/shared/_goal-card.html.erb:21
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."goal_id" = $1[0m  [["goal_id", 2146]]
+  ↳ app/helpers/application_helper.rb:4
+  [1m[36mCACHE Subject Load (0.0ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 761], ["LIMIT", 1]]
+  ↳ app/views/shared/_goal-card.html.erb:21
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."goal_id" = $1[0m  [["goal_id", 2148]]
+  ↳ app/helpers/application_helper.rb:4
+  [1m[36mCACHE Subject Load (0.0ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 761], ["LIMIT", 1]]
+  ↳ app/views/shared/_goal-card.html.erb:21
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."goal_id" = $1[0m  [["goal_id", 2152]]
+  ↳ app/helpers/application_helper.rb:4
+  [1m[36mCACHE Subject Load (0.0ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 761], ["LIMIT", 1]]
+  ↳ app/views/shared/_goal-card.html.erb:21
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."goal_id" = $1[0m  [["goal_id", 2145]]
+  ↳ app/helpers/application_helper.rb:4
+  [1m[36mCACHE Subject Load (0.0ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 761], ["LIMIT", 1]]
+  ↳ app/views/shared/_goal-card.html.erb:21
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."goal_id" = $1[0m  [["goal_id", 2144]]
+  ↳ app/helpers/application_helper.rb:4
+  [1m[36mCACHE Subject Load (0.0ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 761], ["LIMIT", 1]]
+  ↳ app/views/shared/_goal-card.html.erb:21
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."goal_id" = $1[0m  [["goal_id", 2153]]
+  ↳ app/helpers/application_helper.rb:4
+  [1m[36mCACHE Subject Load (0.0ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 761], ["LIMIT", 1]]
+  ↳ app/views/shared/_goal-card.html.erb:21
+  [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."goal_id" = $1[0m  [["goal_id", 2150]]
+  ↳ app/helpers/application_helper.rb:4
+  [1m[36mCACHE Subject Load (0.0ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 761], ["LIMIT", 1]]
+  ↳ app/views/shared/_goal-card.html.erb:21
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."goal_id" = $1[0m  [["goal_id", 2143]]
+  ↳ app/helpers/application_helper.rb:4
+  [1m[36mCACHE Subject Load (0.0ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 762], ["LIMIT", 1]]
+  ↳ app/views/shared/_goal-card.html.erb:21
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."goal_id" = $1[0m  [["goal_id", 2135]]
+  ↳ app/helpers/application_helper.rb:4
+  [1m[36mCACHE Subject Load (0.0ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 761], ["LIMIT", 1]]
+  ↳ app/views/shared/_goal-card.html.erb:21
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."goal_id" = $1[0m  [["goal_id", 2147]]
+  ↳ app/helpers/application_helper.rb:4
+  [1m[36mSubject Load (1.0ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 770], ["LIMIT", 1]]
+  ↳ app/views/shared/_goal-card.html.erb:21
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."goal_id" = $1[0m  [["goal_id", 2138]]
+  ↳ app/helpers/application_helper.rb:4
+  [1m[36mSubject Load (0.3ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 764], ["LIMIT", 1]]
+  ↳ app/views/shared/_goal-card.html.erb:21
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."goal_id" = $1[0m  [["goal_id", 2139]]
+  ↳ app/helpers/application_helper.rb:4
+  [1m[36mCACHE Subject Load (0.0ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 761], ["LIMIT", 1]]
+  ↳ app/views/shared/_goal-card.html.erb:21
+  [1m[36mTask Load (1.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."goal_id" = $1[0m  [["goal_id", 2149]]
+  ↳ app/helpers/application_helper.rb:4
+  [1m[36mSubject Load (0.3ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 766], ["LIMIT", 1]]
+  ↳ app/views/shared/_goal-card.html.erb:21
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."goal_id" = $1[0m  [["goal_id", 2136]]
+  ↳ app/helpers/application_helper.rb:4
+  [1m[36mCACHE Subject Load (0.0ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 770], ["LIMIT", 1]]
+  ↳ app/views/shared/_goal-card.html.erb:21
+  [1m[36mTask Load (1.0ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."goal_id" = $1[0m  [["goal_id", 2140]]
+  ↳ app/helpers/application_helper.rb:4
+  [1m[36mCACHE Subject Load (0.0ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 761], ["LIMIT", 1]]
+  ↳ app/views/shared/_goal-card.html.erb:21
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."goal_id" = $1[0m  [["goal_id", 2142]]
+  ↳ app/helpers/application_helper.rb:4
+  [1m[36mCACHE Subject Load (0.0ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 766], ["LIMIT", 1]]
+  ↳ app/views/shared/_goal-card.html.erb:21
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."goal_id" = $1[0m  [["goal_id", 2141]]
+  ↳ app/helpers/application_helper.rb:4
+  [1m[36mCACHE Subject Load (0.0ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 764], ["LIMIT", 1]]
+  ↳ app/views/shared/_goal-card.html.erb:21
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."goal_id" = $1[0m  [["goal_id", 2137]]
+  ↳ app/helpers/application_helper.rb:4
+  [1m[36mCACHE Subject Load (0.0ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 762], ["LIMIT", 1]]
+  ↳ app/views/shared/_goal-card.html.erb:21
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."goal_id" = $1[0m  [["goal_id", 2155]]
+  ↳ app/helpers/application_helper.rb:4
+  Rendered shared/_goal-card.html.erb (492.6ms)
+  Rendered goals/index.html.erb within layouts/application (501.0ms)
+  Rendered shared/_navbar.html.erb (2.7ms)
+  Rendered shared/_flashes.html.erb (0.5ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 600ms (Views: 279.6ms | ActiveRecord: 262.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-21 03:53:52 +0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 449], ["LIMIT", 1]]
+  ↳ app/views/shared/_home-banner.html.erb:5
+  Rendered shared/_home-banner.html.erb (4.3ms)
+  Rendered shared/_pricing.html.erb (1.8ms)
+  Rendered pages/home.html.erb within layouts/application (13.2ms)
+  Rendered shared/_navbar.html.erb (2.1ms)
+  Rendered shared/_flashes.html.erb (0.6ms)
+  Rendered shared/_footer.html.erb (1.3ms)
+Completed 200 OK in 55ms (Views: 53.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2018-10-21 03:53:54 +0200
+Processing by PagesController#dashboard as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 449], ["LIMIT", 1]]
+  ↳ /home/jan/.rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mGoal Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM "goals" WHERE "goals"."user_id" = $1 LIMIT $2[0m  [["user_id", 449], ["LIMIT", 1]]
+  ↳ app/views/pages/dashboard.html.erb:14
+  [1m[36mGoal Load (1.0ms)[0m  [1m[34mSELECT "goals".* FROM "goals" WHERE "goals"."user_id" = $1[0m  [["user_id", 449]]
+  ↳ app/views/shared/_my-goal-card.html.erb:1
+  [1m[36mSubject Load (0.3ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 762], ["LIMIT", 1]]
+  ↳ app/views/shared/_my-goal-card.html.erb:17
+  [1m[36mTask Load (1.7ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."goal_id" = $1[0m  [["goal_id", 2134]]
+  ↳ app/helpers/application_helper.rb:4
+  [1m[36mCACHE Subject Load (0.0ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 762], ["LIMIT", 1]]
+  ↳ app/views/shared/_my-goal-card.html.erb:17
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."goal_id" = $1[0m  [["goal_id", 2135]]
+  ↳ app/helpers/application_helper.rb:4
+  [1m[36mSubject Load (0.3ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 766], ["LIMIT", 1]]
+  ↳ app/views/shared/_my-goal-card.html.erb:17
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."goal_id" = $1[0m  [["goal_id", 2136]]
+  ↳ app/helpers/application_helper.rb:4
+  [1m[36mSubject Load (0.2ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 764], ["LIMIT", 1]]
+  ↳ app/views/shared/_my-goal-card.html.erb:17
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."goal_id" = $1[0m  [["goal_id", 2137]]
+  ↳ app/helpers/application_helper.rb:4
+  [1m[36mSubject Load (0.8ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 770], ["LIMIT", 1]]
+  ↳ app/views/shared/_my-goal-card.html.erb:17
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."goal_id" = $1[0m  [["goal_id", 2138]]
+  ↳ app/helpers/application_helper.rb:4
+  [1m[36mCACHE Subject Load (0.0ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 764], ["LIMIT", 1]]
+  ↳ app/views/shared/_my-goal-card.html.erb:17
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."goal_id" = $1[0m  [["goal_id", 2139]]
+  ↳ app/helpers/application_helper.rb:4
+  [1m[36mCACHE Subject Load (0.0ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 770], ["LIMIT", 1]]
+  ↳ app/views/shared/_my-goal-card.html.erb:17
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."goal_id" = $1[0m  [["goal_id", 2140]]
+  ↳ app/helpers/application_helper.rb:4
+  [1m[36mCACHE Subject Load (0.0ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 766], ["LIMIT", 1]]
+  ↳ app/views/shared/_my-goal-card.html.erb:17
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."goal_id" = $1[0m  [["goal_id", 2141]]
+  ↳ app/helpers/application_helper.rb:4
+  [1m[36mSubject Load (0.3ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 761], ["LIMIT", 1]]
+  ↳ app/views/shared/_my-goal-card.html.erb:17
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."goal_id" = $1[0m  [["goal_id", 2142]]
+  ↳ app/helpers/application_helper.rb:4
+  [1m[36mCACHE Subject Load (0.0ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 761], ["LIMIT", 1]]
+  ↳ app/views/shared/_my-goal-card.html.erb:17
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."goal_id" = $1[0m  [["goal_id", 2143]]
+  ↳ app/helpers/application_helper.rb:4
+  [1m[36mCACHE Subject Load (0.2ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 761], ["LIMIT", 1]]
+  ↳ app/views/shared/_my-goal-card.html.erb:17
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."goal_id" = $1[0m  [["goal_id", 2144]]
+  ↳ app/helpers/application_helper.rb:4
+  [1m[36mCACHE Subject Load (0.0ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 761], ["LIMIT", 1]]
+  ↳ app/views/shared/_my-goal-card.html.erb:17
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."goal_id" = $1[0m  [["goal_id", 2145]]
+  ↳ app/helpers/application_helper.rb:4
+  [1m[36mCACHE Subject Load (0.0ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 761], ["LIMIT", 1]]
+  ↳ app/views/shared/_my-goal-card.html.erb:17
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."goal_id" = $1[0m  [["goal_id", 2146]]
+  ↳ app/helpers/application_helper.rb:4
+  [1m[36mCACHE Subject Load (0.0ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 761], ["LIMIT", 1]]
+  ↳ app/views/shared/_my-goal-card.html.erb:17
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."goal_id" = $1[0m  [["goal_id", 2147]]
+  ↳ app/helpers/application_helper.rb:4
+  [1m[36mCACHE Subject Load (0.0ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 761], ["LIMIT", 1]]
+  ↳ app/views/shared/_my-goal-card.html.erb:17
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."goal_id" = $1[0m  [["goal_id", 2148]]
+  ↳ app/helpers/application_helper.rb:4
+  [1m[36mCACHE Subject Load (0.0ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 761], ["LIMIT", 1]]
+  ↳ app/views/shared/_my-goal-card.html.erb:17
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."goal_id" = $1[0m  [["goal_id", 2149]]
+  ↳ app/helpers/application_helper.rb:4
+  [1m[36mCACHE Subject Load (0.0ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 761], ["LIMIT", 1]]
+  ↳ app/views/shared/_my-goal-card.html.erb:17
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."goal_id" = $1[0m  [["goal_id", 2150]]
+  ↳ app/helpers/application_helper.rb:4
+  [1m[36mCACHE Subject Load (0.0ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 761], ["LIMIT", 1]]
+  ↳ app/views/shared/_my-goal-card.html.erb:17
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."goal_id" = $1[0m  [["goal_id", 2151]]
+  ↳ app/helpers/application_helper.rb:4
+  [1m[36mCACHE Subject Load (0.0ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 761], ["LIMIT", 1]]
+  ↳ app/views/shared/_my-goal-card.html.erb:17
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."goal_id" = $1[0m  [["goal_id", 2152]]
+  ↳ app/helpers/application_helper.rb:4
+  [1m[36mCACHE Subject Load (0.0ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 761], ["LIMIT", 1]]
+  ↳ app/views/shared/_my-goal-card.html.erb:17
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."goal_id" = $1[0m  [["goal_id", 2153]]
+  ↳ app/helpers/application_helper.rb:4
+  [1m[36mCACHE Subject Load (0.0ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 761], ["LIMIT", 1]]
+  ↳ app/views/shared/_my-goal-card.html.erb:17
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."goal_id" = $1[0m  [["goal_id", 2154]]
+  ↳ app/helpers/application_helper.rb:4
+  [1m[36mCACHE Subject Load (0.0ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 762], ["LIMIT", 1]]
+  ↳ app/views/shared/_my-goal-card.html.erb:17
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."goal_id" = $1[0m  [["goal_id", 2155]]
+  ↳ app/helpers/application_helper.rb:4
+  Rendered shared/_my-goal-card.html.erb (123.5ms)
+  Rendered pages/dashboard.html.erb within layouts/application (129.4ms)
+  Rendered shared/_navbar.html.erb (8.6ms)
+  Rendered shared/_flashes.html.erb (3.0ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 179ms (Views: 161.6ms | ActiveRecord: 12.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-21 03:53:59 +0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (5.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 449], ["LIMIT", 1]]
+  ↳ app/views/shared/_home-banner.html.erb:5
+  Rendered shared/_home-banner.html.erb (11.2ms)
+  Rendered shared/_pricing.html.erb (1.9ms)
+  Rendered pages/home.html.erb within layouts/application (22.2ms)
+  Rendered shared/_navbar.html.erb (2.6ms)
+  Rendered shared/_flashes.html.erb (0.5ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 58ms (Views: 51.1ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2018-10-21 03:54:07 +0200
+Processing by PagesController#dashboard as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 449], ["LIMIT", 1]]
+  ↳ /home/jan/.rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mGoal Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "goals" WHERE "goals"."user_id" = $1 LIMIT $2[0m  [["user_id", 449], ["LIMIT", 1]]
+  ↳ app/views/pages/dashboard.html.erb:14
+  [1m[36mGoal Load (0.7ms)[0m  [1m[34mSELECT "goals".* FROM "goals" WHERE "goals"."user_id" = $1[0m  [["user_id", 449]]
+  ↳ app/views/shared/_my-goal-card.html.erb:1
+  [1m[36mSubject Load (0.6ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 762], ["LIMIT", 1]]
+  ↳ app/views/shared/_my-goal-card.html.erb:17
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."goal_id" = $1[0m  [["goal_id", 2134]]
+  ↳ app/helpers/application_helper.rb:4
+  [1m[36mCACHE Subject Load (0.0ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 762], ["LIMIT", 1]]
+  ↳ app/views/shared/_my-goal-card.html.erb:17
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."goal_id" = $1[0m  [["goal_id", 2135]]
+  ↳ app/helpers/application_helper.rb:4
+  [1m[36mSubject Load (0.4ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 766], ["LIMIT", 1]]
+  ↳ app/views/shared/_my-goal-card.html.erb:17
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."goal_id" = $1[0m  [["goal_id", 2136]]
+  ↳ app/helpers/application_helper.rb:4
+  [1m[36mSubject Load (0.7ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 764], ["LIMIT", 1]]
+  ↳ app/views/shared/_my-goal-card.html.erb:17
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."goal_id" = $1[0m  [["goal_id", 2137]]
+  ↳ app/helpers/application_helper.rb:4
+  [1m[36mSubject Load (0.4ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 770], ["LIMIT", 1]]
+  ↳ app/views/shared/_my-goal-card.html.erb:17
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."goal_id" = $1[0m  [["goal_id", 2138]]
+  ↳ app/helpers/application_helper.rb:4
+  [1m[36mCACHE Subject Load (0.0ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 764], ["LIMIT", 1]]
+  ↳ app/views/shared/_my-goal-card.html.erb:17
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."goal_id" = $1[0m  [["goal_id", 2139]]
+  ↳ app/helpers/application_helper.rb:4
+  [1m[36mCACHE Subject Load (0.0ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 770], ["LIMIT", 1]]
+  ↳ app/views/shared/_my-goal-card.html.erb:17
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."goal_id" = $1[0m  [["goal_id", 2140]]
+  ↳ app/helpers/application_helper.rb:4
+  [1m[36mCACHE Subject Load (0.0ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 766], ["LIMIT", 1]]
+  ↳ app/views/shared/_my-goal-card.html.erb:17
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."goal_id" = $1[0m  [["goal_id", 2141]]
+  ↳ app/helpers/application_helper.rb:4
+  [1m[36mSubject Load (0.3ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 761], ["LIMIT", 1]]
+  ↳ app/views/shared/_my-goal-card.html.erb:17
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."goal_id" = $1[0m  [["goal_id", 2142]]
+  ↳ app/helpers/application_helper.rb:4
+  [1m[36mCACHE Subject Load (0.0ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 761], ["LIMIT", 1]]
+  ↳ app/views/shared/_my-goal-card.html.erb:17
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."goal_id" = $1[0m  [["goal_id", 2143]]
+  ↳ app/helpers/application_helper.rb:4
+  [1m[36mCACHE Subject Load (0.0ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 761], ["LIMIT", 1]]
+  ↳ app/views/shared/_my-goal-card.html.erb:17
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."goal_id" = $1[0m  [["goal_id", 2144]]
+  ↳ app/helpers/application_helper.rb:4
+  [1m[36mCACHE Subject Load (0.0ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 761], ["LIMIT", 1]]
+  ↳ app/views/shared/_my-goal-card.html.erb:17
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."goal_id" = $1[0m  [["goal_id", 2145]]
+  ↳ app/helpers/application_helper.rb:4
+  [1m[36mCACHE Subject Load (0.0ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 761], ["LIMIT", 1]]
+  ↳ app/views/shared/_my-goal-card.html.erb:17
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."goal_id" = $1[0m  [["goal_id", 2146]]
+  ↳ app/helpers/application_helper.rb:4
+  [1m[36mCACHE Subject Load (0.0ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 761], ["LIMIT", 1]]
+  ↳ app/views/shared/_my-goal-card.html.erb:17
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."goal_id" = $1[0m  [["goal_id", 2147]]
+  ↳ app/helpers/application_helper.rb:4
+  [1m[36mCACHE Subject Load (0.0ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 761], ["LIMIT", 1]]
+  ↳ app/views/shared/_my-goal-card.html.erb:17
+  [1m[36mTask Load (0.8ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."goal_id" = $1[0m  [["goal_id", 2148]]
+  ↳ app/helpers/application_helper.rb:4
+  [1m[36mCACHE Subject Load (0.0ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 761], ["LIMIT", 1]]
+  ↳ app/views/shared/_my-goal-card.html.erb:17
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."goal_id" = $1[0m  [["goal_id", 2149]]
+  ↳ app/helpers/application_helper.rb:4
+  [1m[36mCACHE Subject Load (0.0ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 761], ["LIMIT", 1]]
+  ↳ app/views/shared/_my-goal-card.html.erb:17
+  [1m[36mTask Load (1.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."goal_id" = $1[0m  [["goal_id", 2150]]
+  ↳ app/helpers/application_helper.rb:4
+  [1m[36mCACHE Subject Load (0.0ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 761], ["LIMIT", 1]]
+  ↳ app/views/shared/_my-goal-card.html.erb:17
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."goal_id" = $1[0m  [["goal_id", 2151]]
+  ↳ app/helpers/application_helper.rb:4
+  [1m[36mCACHE Subject Load (0.0ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 761], ["LIMIT", 1]]
+  ↳ app/views/shared/_my-goal-card.html.erb:17
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."goal_id" = $1[0m  [["goal_id", 2152]]
+  ↳ app/helpers/application_helper.rb:4
+  [1m[36mCACHE Subject Load (0.0ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 761], ["LIMIT", 1]]
+  ↳ app/views/shared/_my-goal-card.html.erb:17
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."goal_id" = $1[0m  [["goal_id", 2153]]
+  ↳ app/helpers/application_helper.rb:4
+  [1m[36mCACHE Subject Load (0.0ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 761], ["LIMIT", 1]]
+  ↳ app/views/shared/_my-goal-card.html.erb:17
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."goal_id" = $1[0m  [["goal_id", 2154]]
+  ↳ app/helpers/application_helper.rb:4
+  [1m[36mCACHE Subject Load (0.0ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" WHERE "subjects"."id" = $1 LIMIT $2[0m  [["id", 762], ["LIMIT", 1]]
+  ↳ app/views/shared/_my-goal-card.html.erb:17
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."goal_id" = $1[0m  [["goal_id", 2155]]
+  ↳ app/helpers/application_helper.rb:4
+  Rendered shared/_my-goal-card.html.erb (112.8ms)
+  Rendered pages/dashboard.html.erb within layouts/application (116.1ms)
+  Rendered shared/_navbar.html.erb (2.4ms)
+  Rendered shared/_flashes.html.erb (0.4ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 151ms (Views: 133.5ms | ActiveRecord: 14.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-21 03:54:12 +0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 449], ["LIMIT", 1]]
+  ↳ app/views/shared/_home-banner.html.erb:5
+  Rendered shared/_home-banner.html.erb (2.4ms)
+  Rendered shared/_pricing.html.erb (2.7ms)
+  Rendered pages/home.html.erb within layouts/application (9.8ms)
+  Rendered shared/_navbar.html.erb (2.1ms)
+  Rendered shared/_flashes.html.erb (0.4ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 46ms (Views: 44.6ms | ActiveRecord: 0.4ms)
+
+
