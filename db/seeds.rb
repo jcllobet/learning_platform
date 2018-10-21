@@ -18,9 +18,9 @@ CATEGORIES = [
             ]
 
 jan = User.create!(name: "jan", email: "jan@estudiant.upc.edu", password: "123456")
-marina = User.create!(name: "marina", email: "oulanakhle@gmail.com", password: "123456")
-santi = User.create!(name: "santi", email: "niko@gmail.com", password: "123456")
-sara = User.create!(name: "santi", email: "niko@gmail.com", password: "123456")
+marina = User.create!(name: "marina", email: "marina@gmail.com", password: "123456")
+santi = User.create!(name: "santi", email: "santi@gmail.com", password: "123456")
+sara = User.create!(name: "santi", email: "sara@gmail.com", password: "123456")
 admin = User.create!(name: "anon", email: "a@b.com", password: "123456")
 
 puts "Creating Subjects"
